@@ -2,43 +2,50 @@ package com.example.sharenetic;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ImageButton sharePostBtn;
+    private ImageButton commentsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Spinner spinner = findViewById(R.id.spinner);
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("GUI Programming");
-        arrayList.add("Artificial Intelligence");
-        arrayList.add("Computer Networks");
-        arrayList.add("Cyber Security");
-
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item, arrayList);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(arrayAdapter);
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        sharePostBtn = (ImageButton) findViewById(R.id.addPostBtn);
+        sharePostBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String tutorialsName = parent.getItemAtPosition(position).toString();
-                Toast.makeText(parent.getContext(), "Selected class is " + tutorialsName,Toast.LENGTH_LONG).show();
-            }
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onClick(View v) {
+                Intent sharePostIntent = new Intent(MainActivity.this,sharePostActivity.class);
+                startActivity(sharePostIntent);
+                finish();
             }
         });
 
+        commentsBtn = (ImageButton) findViewById(R.id.commentsBtn);
+        commentsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent showCommentsIntent = new Intent(MainActivity.this,postActivity.class);
+                startActivity(showCommentsIntent);
+                finish();
+            }
+        });
     }
 }
