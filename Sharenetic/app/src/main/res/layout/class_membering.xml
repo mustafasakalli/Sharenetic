@@ -8,32 +8,6 @@
     android:orientation="vertical">
 
 
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Create a class"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3"
-        app:layout_constraintVertical_bias="0.114" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Join a class"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_layout"
-        app:layout_constraintVertical_bias="0.254" />
-
     <LinearLayout
         android:id="@+id/top_layout"
         android:layout_width="match_parent"
@@ -88,5 +62,31 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/joinBtn"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:background="#C42196F3"
+        android:text="JOIN A CLASS"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_layout"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <Button
+        android:id="@+id/createBtn"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:background="#C42196F3"
+        android:text="CREATE A CLASS"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joinBtn"
+        app:layout_constraintVertical_bias="0.065" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
