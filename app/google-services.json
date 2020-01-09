@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "747421338938",
+    "firebase_url": "https://sharenetic.firebaseio.com",
+    "project_id": "sharenetic",
+    "storage_bucket": "sharenetic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747421338938:android:0e7ca9b1624635ca431403",
+        "android_client_info": {
+          "package_name": "com.example.sharenetic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747421338938-nm26pe6qfojfe69vt5evvj8mvuu6ep2r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharenetic",
+            "certificate_hash": "625d9cdbbd3e97db8edea8f688fd554286cb816d"
+          }
+        },
+        {
+          "client_id": "747421338938-kjuoj4tlncbna6rh69fsgh5e04noanmo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2PAtIOohROsRl0iN2obO5RnXX5XrPl_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747421338938-kjuoj4tlncbna6rh69fsgh5e04noanmo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
