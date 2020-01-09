@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -9,9 +10,7 @@
         android:id="@+id/top_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/postsScrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -52,314 +51,22 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/classesBtn"
                 app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-
-    <ScrollView
-        android:id="@+id/postsScrollView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/addPostBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/top_layout">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/example"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@+id/layout2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Beyza Kurt"
-                    android:textColor="#2667A5"
-                    android:textSize="17dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/post"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/post"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/classs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:text="GUI Programming"
-                    android:textColor="#2B77C2"
-                    android:textSize="16dp"
-                    android:textStyle="italic"
-                    app:layout_constraintEnd_toEndOf="@+id/post"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/post"
-                    app:layout_constraintTop_toBottomOf="@+id/post" />
-
-                <ImageButton
-                    android:id="@+id/commentsBtn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="#ffFFFF"
-                    app:layout_constraintBottom_toBottomOf="@+id/post"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/post"
-                    app:layout_constraintTop_toTopOf="@+id/post"
-                    app:srcCompat="@mipmap/comments" />
-
-                <TextView
-                    android:id="@+id/post"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/textview_border1"
-                    android:inputType="textMultiLine"
-                    android:padding="10dp"
-                    android:text="Hey guys! Does anyone know the office hours of the Mr. Kılıç?"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toTopOf="@+id/classs"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/username" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@+id/layout3"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout1">
-
-                <TextView
-                    android:id="@+id/username2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="8dp"
-                    android:text="username"
-                    android:textColor="#2667A5"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/post2"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn2"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/post2"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/post2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/textview_border1"
-                    android:inputType="textMultiLine"
-                    android:padding="10dp"
-                    android:text="text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text "
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toTopOf="@+id/classs2"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/username2" />
-
-                <TextView
-                    android:id="@+id/classs2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:text="class"
-                    android:textColor="#2B77C2"
-                    android:textSize="16dp"
-                    android:textStyle="italic"
-                    app:layout_constraintEnd_toEndOf="@+id/post2"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/post2"
-                    app:layout_constraintTop_toBottomOf="@+id/post2" />
-
-                <ImageButton
-                    android:id="@+id/commentsBtn2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="#ffFFFF"
-                    app:layout_constraintBottom_toBottomOf="@+id/post2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/post2"
-                    app:layout_constraintTop_toTopOf="@+id/post2"
-                    app:srcCompat="@mipmap/comments" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout2">
-
-                <TextView
-                    android:id="@+id/username3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="8dp"
-                    android:text="username"
-                    android:textColor="#2667A5"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/post3"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn3"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/post3"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/post3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/textview_border1"
-                    android:inputType="textMultiLine"
-                    android:padding="10dp"
-                    android:text="text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text "
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toTopOf="@+id/classs3"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/username3" />
-
-                <TextView
-                    android:id="@+id/classs3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:text="class"
-                    android:textColor="#2B77C2"
-                    android:textSize="16dp"
-                    android:textStyle="italic"
-                    app:layout_constraintEnd_toEndOf="@+id/post3"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/post3"
-                    app:layout_constraintTop_toBottomOf="@+id/post3" />
-
-                <ImageButton
-                    android:id="@+id/commentsBtn3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="#ffFFFF"
-                    app:layout_constraintBottom_toBottomOf="@+id/post3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/post3"
-                    app:layout_constraintTop_toTopOf="@+id/post3"
-                    app:srcCompat="@mipmap/comments" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/layout4"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/logoutBtn"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layout3">
-
-                <TextView
-                    android:id="@+id/username4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="8dp"
-                    android:text="username"
-                    android:textColor="#2667A5"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/post4"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn4"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/post4"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/post4"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/textview_border1"
-                    android:inputType="textMultiLine"
-                    android:padding="10dp"
-                    android:text="text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text "
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textColor="#000000"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toTopOf="@+id/classs4"
-                    app:layout_constraintEnd_toStartOf="@+id/commentsBtn4"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/username4" />
-
-                <TextView
-                    android:id="@+id/classs4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="5dp"
-                    android:layout_marginBottom="1dp"
-                    android:text="class"
-                    android:textColor="#2B77C2"
-                    android:textSize="16dp"
-                    android:textStyle="italic"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/post4"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="@+id/post4"
-                    app:layout_constraintTop_toBottomOf="@+id/post4" />
-
-                <ImageButton
-                    android:id="@+id/commentsBtn4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:background="#ffFFFF"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/post4"
-                    app:layout_constraintTop_toTopOf="@+id/post4"
-                    app:srcCompat="@mipmap/comments" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
+                app:layout_constraintHorizontal_bias="0.8"
+                app:layout_constraintStart_toEndOf="@+id/calendarBtn"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_lock_power_off" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/addPostBtn"
@@ -371,7 +78,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postsScrollView"
         app:srcCompat="@mipmap/plus" />
+
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/addPostBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_layout">
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
